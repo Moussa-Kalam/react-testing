@@ -4,7 +4,7 @@ const ProductImageGallery = ({ imageUrls }: { imageUrls: string[] }) => {
   return (
     <ul>
       {imageUrls.map((url) => (
-        <li key={url}>
+        <li key={url}>=
           <img src={url} />
         </li>
       ))}

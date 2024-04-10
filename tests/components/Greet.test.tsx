@@ -8,7 +8,7 @@ describe('Greet', () => {
     const heading = screen.getByRole('heading');
     expect(heading).toBeInTheDocument();
     expect(heading).toHaveTextContent(/moussa/i);
-  });
+  });  
 
   it('should render login button when name is not provided', () => {
     render(<Greet />);
