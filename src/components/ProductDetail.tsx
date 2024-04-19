@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+ import { useEffect, useState } from "react";
 import { Product } from "../entities";
 
-const ProductDetail = ({ productId }: { productId: number }) => {
+const ProductDetail = ({ productId }: { productId?: number }) => {
   const [product, setProduct] = useState<Product | undefined>(
     undefined
   );
