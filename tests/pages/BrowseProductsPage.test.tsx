@@ -34,7 +34,7 @@ describe('BrowseProductsPage', () => {
   it('should hide the loading skeleton after fetching categories', async () => {
     renderComponent();
 
-    await waitForElementToBeRemoved(
+    await waitForElementToBeRemoved(() =>
       screen.queryByRole('progressbar', { name: /categories/i })
     );
   });
@@ -57,7 +57,7 @@ describe('BrowseProductsPage', () => {
   it('should hide the loading skeleton after fetching products', async () => {
     renderComponent();
 
-    await waitForElementToBeRemoved(
+    await waitForElementToBeRemoved(() =>
       screen.queryByRole('progressbar', { name: /products/i })
     );
   });
