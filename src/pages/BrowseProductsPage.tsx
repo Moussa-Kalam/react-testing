@@ -21,7 +21,7 @@ function BrowseProducts() {
     const fetchProducts = async () => {
       try {
         setProductsLoading(true);
-        const { data } = await axios.get<Product[]>('/products');
+        const { data } = await axios.get<Product[]>('/xproducts');
         setProducts(data);
       } catch (error) {
         if (error instanceof AxiosError) setErrorProducts(error.message);
@@ -56,7 +56,7 @@ function BrowseProducts() {
           <Skeleton />
         </div>
       );
-    if (errorCategories) return <div>Error: {errorCategories}</div>;
+    if (errorCategories) return null
     return (
       <Select.Root
         onValueChange={(categoryId) =>
